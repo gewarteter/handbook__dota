@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Герои</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/heroes.css">
+</head>
+<body>
+    <div class="intro" id="introPage">
+		<div class="header__screensaver">
+            <div class="container">
+                <div class="inner">
+                    <img src="../assets/images/dota_icon.svg" alt="иконка доты">
+                    <div class="navigation">
+                        <button class="burger" id="burger_menu"><span></span><span></span><span></span></button>
+                        <nav class="sidebar">
+                            <ul>
+                                <li><a href="../pages/items.html">Предметы</a></li>
+                                <li><a href="../pages/heroes.html">Герои</a></li>
+                                <li><a href="../pages/ranks.html">Ранги</a></li>
+                                <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                                <li><a href="../pages/runes.html">Руны</a></li>
+                                <li><a href="../pages/buildings.html">Постройки</a></li>
+                                <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="intro__main">
+			<div class="name"><h1>ГЕРОИ</h1></div>
+            <div class="container">
+                <div class="text__wrapper">
+                    <div class="description">
+                        <p>Герои</p>
+                        <span></span>
+                        <p class="definition">уникальные персонажи, которыми управляют игроки в матчах. Каждый обладает особыми способностями. По ходу игры они зарабатывают золото и опыт для усиления своих способностей</p>
+                    </div>
+                    <button class="to__heroes" id="next">Все герои</button>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="page hidden" id="contentPage">
+		<header>
+        <div class="container">
+            <button class="page__btn" id="prev"><img src="../assets/images/arrow_to_left.svg" alt="обратно"></button>
+		</div>
+    	</header>
+        <main>
+            <div class="container">
+                <p class="text_center">Герои делятся на две основные категории: по основному атрибуту и по позиции в команде.</p>
+            </div>
+            <section>
+                <div class="container">
+                    <h3 class="text_center">Атрибуты</h3>
+                    <div class="attributes">
+                        <div class="accordion__wrapper">
+                            <div class="label">
+                                <div class="label__name">
+                                    <img src="../assets/images/Attribute_strength.png" alt="сила">
+                                    <p>Сила</p>
+                                </div>
+                                <img class="attribute__btn" src="../assets/images/path.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="description__wrapper">
+                                    <p>Повышает живучесть героя, увеличивая максимальное количество здоровья и скорость его регенерации. Также даёт дополнительный урон от атаки.</p>
+                                    <p>Герои силы могут подойти целому ряду ролей, многие из них являются инициаторами или обладают сильным контролем и почти все они герои ближнего боя.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="label">
+                                <div class="label__name">
+                                    <img src="../assets/images/Attribute_agility.png" alt="ловкость">
+                                    <p>Ловкость</p>
+                                </div>
+                                <img class="attribute__btn" src="../assets/images/path.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="description__wrapper">
+                                    <p>Увеличивает броню, скорость атаки и урон от атаки, делая героя более проворным и опасным в бою.</p>
+                                    <p>Герои ловкости часто берутся на роль керри, из-за их хорошего развития по игре.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion__wrapper">
+                            <div class="label">
+                                <div class="label__name">
+                                    <img src="../assets/images/Attribute_intelligence.png" alt="интелект">
+                                    <p>Интелект</p>
+                                </div>
+                                <img class="attribute__btn" src="../assets/images/path.svg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="description__wrapper">
+                                    <p>Отвечает за ману, скорость её восстановления и сопротивление магии.</p>
+                                    <p>Такие герои часто полагаются на свои способности, наносящие магический урон или предоставляющие контроль над противниками. Их часто берут на поддержку, некоторых берут на керри.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="container">
+                <div class="attribute_universal">
+                    <p>Также существуют универсальные герои, которые получают бонус к урону от всех атрибутов.</p>
+                    <img src="../assets/images/Attribute_universal.png" alt="универсальный">
+                </div>
+            </div>
+            <section>
+                <div class="container"><h3 class="text_center">Позиции</h3></div>
+                <div class="map_of_pos"><img src="../assets/images/map_of_pos.png" alt=""></div>
+                <div class="container">
+                    <p class="text_center">Существует пять позиций, которые определяются их приоритетом в получении ресурсов и их местом на карте: керри (1), мидера (2), оффлейнера (3) и саппортов (4 и 5).</p>
+                    <div class="positions">
+                        <div class="positions__description">
+                            <p>1 позиция (Керри): Главный фармящий герой, который нуждается в большом количестве ресурсов для поздней игры. Он находится на легкой линии (бот). </p>
+                        </div>
+                        <div class="positions__description">
+                            <p>2 позиция (Мидер): Герой, который стоит на центральной линии (мид) в одиночку. Его задача — фармить и помогать команде на других линиях.</p>
+                        </div>
+                        <div class="positions__description">
+                            <p>3 позиция (Оффлейнер): Герой, который стоит на сложной линии (топ) против двух противников. Его основная задача — выживать и способствовать контролю карты.</p>
+                        </div>
+                        <div class="positions__description">
+                            <p> 4 позиция (Саппорт): Герой поддержки, который играет на сложной линии (топ) вместе с тройкой, но активно перемещается по карте, помогая другим линиям и контролируя руны.</p>
+                        </div>
+                        <div class="positions__description">
+                            <p>5 позиция (Хард-саппорт): Герой полной поддержки, который проводит большую часть игры на линии с керри, защищая его и помогая фармить. Его основная задача — приносить пользу команде без необходимости фарма.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="container">
+                    <h3 class="text_center">Герои</h3>
+                    <p class="text_center">На данный момент в игре 126 героев.</p>
+                    <div class="filter">
+                        <div class="filter__wrapper">
+                            <button class="filter_btn" data-id="strenght"><img src="../assets/images/Attribute_strength.png" alt=""></button>
+                            <button class="filter_btn" data-id="agility"><img src="../assets/images/Attribute_agility.png" alt=""></button>
+                            <button class="filter_btn" data-id="intelligence"><img src="../assets/images/Attribute_intelligence.png" alt=""></button>
+                            <button class="filter_btn" data-id="universal"><img src="../assets/images/Attribute_universal.png" alt=""></button>
+                        </div>
+                        <div class="cards">
+                            <div class="card__holder strenght">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_alchemist.png" alt="">
+                                    <p class="name_of_hero">Alchemist</p>
+                                </div>
+                            </div>
+                            <div class="card__holder strenght">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_elder_titan.png" alt="">
+                                    <p class="name_of_hero">Elder Titan</p>
+                                </div>
+                            </div>
+                            <div class="card__holder strenght">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_huskar.png" alt="">
+                                    <p class="name_of_hero">Huskar</p>
+                                </div>
+                            </div>
+                            <div class="card__holder agility">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_antimage.png" alt="">
+                                    <p class="name_of_hero">Anti-Mage</p>
+                                </div>
+                            </div>
+                            <div class="card__holder agility">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_morphling.png" alt="">
+                                    <p class="name_of_hero">Morphling</p>
+                                </div>
+                            </div>
+                            <div class="card__holder agility">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_phantom_assassin.png" alt="">
+                                    <p class="name_of_hero">Phantom Assassin</p>
+                                </div>
+                            </div>
+                            <div class="card__holder intelligence">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_ancient_apparition.png" alt="">
+                                    <p class="name_of_hero">Ancient Apparition</p>
+                                </div>
+                            </div>
+                            <div class="card__holder intelligence">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_jakiro.png" alt="">
+                                    <p class="name_of_hero">Jakiro</p>
+                                </div>
+                            </div>
+                            <div class="card__holder intelligence">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_dark_willow.png" alt="">
+                                    <p class="name_of_hero">Dark Willow</p>
+                                </div>
+                            </div>
+                            <div class="card__holder universal">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_abaddon.png" alt="">
+                                    <p class="name_of_hero">Abaddon</p>
+                                </div>
+                            </div>
+                            <div class="card__holder universal">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_arc_warden.png" alt="">
+                                    <p class="name_of_hero">Arc Warden</p>
+                                </div>
+                            </div>
+                            <div class="card__holder universal">
+                                <div class="card block_hero">
+                                    <img src="../assets/images/hero_bane.png" alt="">
+                                    <p class="name_of_hero">Bane</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <footer></footer>
+        </main>
+        <footer></footer>
+        <script defer src="../scripts/burger.js"></script>
+        <script defer src="../scripts/heroes.js"></script>
+</body>
+</html>

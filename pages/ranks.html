@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ранги</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/ranks.css">
+</head>
+<body>
+    <div class="intro" id="introPage">
+        <div class="header__screensaver">
+            <div class="container">
+                <div class="inner">
+                    <img src="../assets/images/dota_icon.svg" alt="иконка доты">
+                    <div class="navigation">
+                        <button class="burger" id="burger_menu"><span></span><span></span><span></span></button>
+                        <nav class="sidebar">
+                        <ul>
+                            <li><a href="../pages/items.html">Предметы</a></li>
+                            <li><a href="../pages/heroes.html">Герои</a></li>
+                            <li><a href="../pages/ranks.html">Ранги</a></li>
+                            <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                            <li><a href="../pages/runes.html">Руны</a></li>
+                            <li><a href="../pages/buildings.html">Постройки</a></li>
+                            <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro__main">
+            <div class="page__name"><h1>РАНГИ</h1></div>
+            <div class="container">
+                <div class="text__wrapper">
+                    <div class="description">
+                        <p>Ранг</p>
+                        <span></span>
+                        <p class="definition">Система званий, отражающих уровень мастерства игрока в соревновательных матчах</p>
+                    </div>
+                    <button class="to__ranks" id="next">Все ранги</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page hidden" id="contentPage">
+        <header>
+        <div class="container">
+            <button class="page__btn" id="prev"><img src="../assets/images/arrow_to_left.svg" alt="обратно"></button>
+		</div>
+        </header>
+        <main>
+            <section>
+                <div class="container">
+                <p class="mmr__definition text_center">MMR: Основной показатель вашего уровня игры, который увеличивается за победы и уменьшается за поражения.</p>
+                </div>
+                <div class="mmr__place"><img src="../assets/images/mmr_place.png" alt=""></div>
+            </section>
+            <section>
+                <div class="container">
+                    <p class="mmr__definition text_center">MMR преобразуется в медаль.</p>
+                    <div class="ranks__wrapper">
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Herald.png" alt="рекрут">
+                            <p>Рекрут</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Guardian.png" alt="страж">
+                            <p>Страж</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Crusader.png" alt="рыцарь">
+                            <p>Рыцарь</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Archon.png" alt="герой">
+                            <p>Герой</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Legend.png" alt="легенда">
+                            <p>Легенда</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Ancient.png" alt="властелин">
+                            <p>Властелин</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Divine.png" alt="божество">
+                            <p>Божество</p>
+                        </div>
+                        <div class="rank__img">
+                            <img src="../assets/images/rank_Immortal.png" alt="титан">
+                            <p>Титан</p>
+                        </div>
+                    </div>
+                    <p class="mmr__definition text_center">Каждый ранг, кроме «Титана», имеет 5 звёзд, показывающих прогресс внутри ранга</p>
+                    <div class="ranks__filter">
+                        <div class="filter__wrapper">
+                            <div class="filter_btn">
+                                <button class="list_item active" data-id="herald">Рекрут <span></span></button>
+                                <button class="list_item" data-id="guardian">Страж <span></span></button>
+                                <button class="list_item" data-id="crusader">Рыцарь <span></span></button>
+                                <button class="list_item" data-id="archon">Герой <span></span></button>
+                                <button class="list_item" data-id="legend">Легенда <span></span></button>
+                                <button class="list_item" data-id="ancient">Властелин <span></span></button>
+                                <button class="list_item" data-id="divine">Божество <span></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container__ranks">
+                        <div class="ranks">
+                            <div class="rank__holder herald">
+                                <div class="rank block__item">
+                                    <div class="rank_in_order">
+                                        <img src="../assets/images/rank__star.png" alt="">
+                                        <p>0</p>
+                                    </div>
+                                    <span class="str"></span>
+                                    <div class="rank_in_order">
+                                        <img src="../assets/images/rank__star_2.png" alt="">
+                                        <p>154</p>
+                                    </div>
+                                    <span class="str"></span>
+                                    <div class="rank_in_order">
+                                        <img src="../assets/images/rank__star_3.png" alt="">
+                                        <p>380</p>
+                                    </div>
+                                    <span class="str"></span>
+                                    <div class="rank_in_order">
+                                        <img src="../assets/images/rank__star_4.png" alt="">
+                                        <p>462</p>
+                                    </div>
+                                    <span class="str"></span>
+                                    <div class="rank_in_order">
+                                        <img src="../assets/images/rank__star_5.png" alt="">
+                                        <p>616</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="immortal__info">
+                        <p class="mmr__definition text_center">Чтобы получить Титана, необходимо достичь 5620+ MMR . После достижения этого значения ваш ранг будет отображаться в виде позиции в региональной таблице лидеров.</p>
+                        <p class="mmr__definition text_center">Региональные таблицы лидеров можно посмотреть на официальном сайте Dota 2 или на сайте дотабаффа.</p>
+                        <p class="mmr__definition text_center">Калибровка: Раз в полгода игроки проходят калибровку – серию матчей, которая определяет новый ранг на основе их текущей игры.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+    <script defer src="../scripts/burger.js"></script>
+    <script defer src="../scripts/ranks.js"></script>
+</body>
+</html>

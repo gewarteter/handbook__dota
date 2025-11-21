@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Руны</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/runes.css">
+</head>
+<body>
+    <div class="intro" id="introPage">
+        <div class="header__screensaver">
+            <div class="container">
+                <div class="inner">
+                    <img src="../assets/images/dota_icon.svg" alt="иконка доты">
+                    <div class="navigation">
+                        <button class="burger" id="burger_menu"><span></span><span></span><span></span></button>
+                        <nav class="sidebar">
+                        <ul>
+                            <li><a href="../pages/items.html">Предметы</a></li>
+                            <li><a href="../pages/heroes.html">Герои</a></li>
+                            <li><a href="../pages/ranks.html">Ранги</a></li>
+                            <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                            <li><a href="../pages/runes.html">Руны</a></li>
+                            <li><a href="../pages/buildings.html">Постройки</a></li>
+                            <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+                        </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="intro__main">
+            <div class="page__name"><h1>РУНЫ</h1></div>
+            <div class="container">
+                <div class="text__wrapper">
+                    <div class="description">
+                        <p>Руны</p>
+                        <span></span>
+                        <p class="definition">Предметы, которые появляются в определенных местах на карте в установленное время и дают различные временные эффекты или бонусы.</p>
+                    </div>
+                    <button class="to__runes" id="next">Все руны</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page hidden" id="contentPage">
+		<header>
+        <div class="container">
+            <button class="page__btn" id="prev"><img src="../assets/images/arrow_to_left.svg" alt="обратно"></button>
+		</div>
+        </header>
+    <main>
+        <div class="slider__container">
+            <div class="slider__wrapper">
+                <div class="slider__position">
+                    <div class="slider"></div>
+                </div>
+                <div class="buttons">
+                    <div class="page__btn" id="back"><img src="../assets/images/arrow_path.svg" alt=""></div>
+                    <div class="page__btn" id="forward"><img src="../assets/images/arrow_path.svg" alt=""></div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="runes__of__enhancement">
+                <div class="titles"><h3>Руны усиления</h3></div>
+                <div class="information">
+                    <p>Начинают появляться в 6:00 на игровых часах, затем каждые 2 минуты (8:00, 10:00 и т. д.)</p>
+                    <p>Они появляются на одной из точек появления рун на реке, на случайной из них.</p>
+                    <p>Если руна не была подобрана до появления следующей, то исчезнет.</p>
+                    <p>Одна и та же руна усиления не может появиться два раза подряд.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="runes">
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_arcane.png" alt="">
+                            <p>Волшебство</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Уменьшение перезарядки: 30%</p>
+                            <p>Уменьшение затрат маны: 30%</p>
+                            <p>Длительность: 50</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>Сочетается мультипликативно с остальными источниками уменьшения времени перезарядки.</p>
+                            <p>Эффект применяется к юнитам, имеющим иммунитет к заклинаниям и неуязвимость.</p>
+                            <p>Эффект нескольких рун не сочетается, но обновляется длительность.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_amplify_damage.png" alt="">
+                            <p>Усиление урона</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Доп. урон: 80%</p>
+                            <p>Доп. урон от заклинаний: 15%</p>
+                            <p>Длительность: 45</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>Увеличивает только начальный урон и который получен от основной характеристики героя.</p>
+                            <p>Эффект может получить существо имеющее невосприимчивость к ээфектам и неуязвимость.</p>
+                            <p>Эффект нескольких рун не сочетается, но обновляется длительность.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_haste.png" alt="">
+                            <p>Ускорение</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Скорость передвижения: 550</p>
+                            <p>Длительность: 22</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>не дает замедлять цель ниже указанного значения. (550)</p>
+                            <p>Эффект может получить юнит, имеющим иммунитет к заклинаниям и неуязвимость.</p>
+                            <p>Эффект нескольких рун не сочетается, но обновляется длительность.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_illusion.png" alt="">
+                            <p>Иллюзия</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Время разделения: 0,1</p>
+                            <p>Кол-во иллюзий: 2</p>
+                            <p>Наносимый иллюзиями урон: 35%</p>
+                            <p>Получаемый иллюзиями урон: 200% (Ближний бой) , 300% (Дальний бой)</p>
+                            <p>Длительность: 75</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>При применении действует неуязвимость, исчезновение и иммунитет к заклинаниям, позволяет избегать снаряды, применяет к владельцу базовое развеивание, сбрасывает все текущие приказы на атаку и применение направленных заклинаний.</p>
+                            <p>Расстояние между существами при появлении составляет 108, если размер столкновения героя равен 24, 24 — если размер столкновения 8.</p>
+                            <p>Активация руны иллюзий в момент, когда на карте уже есть ваши копии от другой руны иллюзий не повлияет на них.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_regeneration.png" alt="">
+                            <p>Регенерация</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Регенерация здоровья в секунду: 6%</p>
+                            <p>Регенерация маны в секунду: 6%</p>
+                            <p>Длительность: 30</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>Урон от любого игрока или  Рошана прекращает действие эффекта.</p>
+                            <p>Не развеевается от заклинаний, помечанных как отнимающие здоровье.</p>
+                            <p>Эффект может получить юнит, имеющим иммунитет к заклинаниям и неуязвимость.</p>
+                            <p>Эффект нескольких рун не сочетается, но обновляется длительность.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion__wrapper">
+                    <div class="label">
+                        <div class="label__name">
+                            <img src="../assets/images/rune_of_invisibility.png" alt="">
+                            <p>Невидимость</p>
+                        </div>
+                        <img class="item__btn" src="../assets/images/path.svg" alt="стрелочко">
+                    </div>
+                    <div class="content">
+                        <div class="gain">
+                            <p>Время до невидимости: 2</p>
+                            <p>Длительность: 45</p>
+                        </div>
+                        <div class="description__wrapper">
+                            <p>до активации невидимости герой может применять способности, использовать предметы и атаковать без отмены невидимости.</p>
+                            <p>Невидимость исчезает при произнесении способностей после окончания времени применения, использовании предметов или нанесении атаки.</p>
+                            <p>Невидимый герой может поднимать или выкладывать предметы без потери невидимости. Атака предметов отменяет невидимость.</p>
+                            <p>Эффект могут получать неуязвимые и спрятанные существа.</p>
+                            <p>Эффект от нескольких рун не сочетается, но обновляется длительность.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section>
+            <div class="container">
+                <div class="title">
+                    <h3>Расположение рун на карте</h3>
+                </div>
+            </div>
+            <div class="map__of__runes"><img src="../assets/images/map_of_runes.png" alt=""></div>
+            <div class="container">
+                <div class="noted"><p>Руной воды обозначены места появления всех рун усиления.</p></div>
+                <div class="runes__icons">
+                    <img src="../assets/images/icon_rune_of_water.png" alt="">
+                    <img src="../assets/images/icon_rune_of_haste.png" alt="">
+                    <img src="../assets/images/icon_rune_of_arcane.png" alt="">
+                    <img src="../assets/images/icon_rune_of_illusion.png" alt="">
+                    <img src="../assets/images/icon_rune_of_amplify_damage.png" alt="">
+                    <img src="../assets/images/icon_rune_of_invisibility.png" alt="">
+                    <img src="../assets/images/icon_rune_of_regeneration.png" alt="">
+                </div>
+            </div>
+        </section>
+        <footer></footer>
+    </main>
+    </div>
+    <script defer src="../scripts/burger.js"></script>
+    <script defer src="../scripts/runes.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Загрузочный экран</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="./styles/basic.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+          <img src="./assets/images/dota_icon.svg" alt="иконка доты" />
+          <div class="navigation">
+            <button class="burger" id="burger_menu">
+              <span></span><span></span><span></span>
+            </button>
+            <nav class="sidebar">
+              <ul>
+                <li><a href="./pages/items.html">Предметы</a></li>
+                <li><a href="./pages/heroes.html">Герои</a></li>
+                <li><a href="./pages/ranks.html">Ранги</a></li>
+                <li><a href="./pages/creeps.html">Крипы, рошан</a></li>
+                <li><a href="./pages/pick_screensaver.html">Как пикать</a></li>
+                <li><a href="./pages/runes.html">Руны</a></li>
+                <li><a href="./pages/buildings_screensaver.html">Постройки</a></li>
+                <li><a href="./pages/account.html"><img src="./assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="greet__block">
+		<div class="container">
+        <div class="greetings">
+          <p>
+            Учеба – это путь, а не пункт назначения, и трудности – его часть
+          </p>
+        </div>
+      </div>
+	  </div>
+	  <div class="bg__image"></div>
+      <div class="ff">
+            <div class="container">
+                <div class="information">
+                    <p>Здесь собрана вся информация для новичков, проходящих порог вхождения в Dota2</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+    <script defer src="./scripts/burger.js"></script>
+  </body>
+</html>

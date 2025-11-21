@@ -1,0 +1,303 @@
+.sidebar{
+    background: linear-gradient(317deg, #707070, #030102 50% 50%);
+}
+
+.intro{
+	background: radial-gradient(circle at bottom, rgba(112, 112, 112, 1) 0%, rgba(1, 1, 2, 1) 40%), #030102;
+    overflow-x: hidden;
+	min-height: 100dvh;
+}
+
+.intro__main{
+	color: #fff;
+}
+
+.header__screensaver{
+    width: 100vw; 
+    height: 50vh; 
+    background-image: url('../assets/images/heroes_screensaver_bc.png'); 
+    background-size: cover; 
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: flex-start; 
+    align-items: center;
+    box-shadow: inset 0px -13px 20px 0px rgba(0, 0, 0, 0.9);
+}
+
+.inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.name{
+    color: #CCCDCE;
+    position: absolute;
+    top: 25%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 100%; 
+    text-align: center;
+}
+
+.name h1{
+    font-size: clamp(2.5em, 8vw, 6em);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9);
+}
+
+.text__wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.description{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+    align-items: center;
+    font-family: Spectral SC ExtraBold;
+    margin-top: 2rem;
+    font-size: clamp(1em, 3vw, 4em);
+}
+
+.description span{
+    display: block;
+    width: 10vw;
+    border-radius: 5px;
+    height: 2px;
+    background-color: #707070;
+}
+
+.definition{
+    font-family: Montseratt;
+}
+
+.to__heroes{
+    margin-top: 15%;
+    width: 50vw;
+    padding: 0.5rem 0.9rem;
+    border: 1px solid #ffffff99;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: clamp(1em, 3vw, 4em);
+    font-family: Spectral SC;
+    color: #CCCDCE;
+}
+
+body{
+    background-color: #030102;
+    overflow-x: hidden;
+    color: #fff;
+    font-family: Montseratt;
+}
+
+header{
+    margin-top: 2vh;
+}
+
+.hidden{
+	display: none;
+}
+
+.page__btn{
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.text_center{
+    font-size: calc(1rem + 0.5vw);
+    margin-top: 1.9rem;
+}
+
+h3{
+    font-family: Spectral SC ExtraBold;
+    margin: 1.9rem 0;
+    font-size: calc(1.17rem + 2vw);
+}
+
+.accordion__wrapper{
+    background-color: #262135;
+    display: flex;
+    flex-direction: column;  
+    color: #fff;
+    border-radius: 10px;
+}
+
+.label{
+    border-radius: 10px;
+    padding: 0.65rem 1.25em 0.65rem 0.65rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: clamp(1.3em, 3vw, 4em); /* 20 */
+}
+
+.label__name{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: calc(1rem + 0.5vw);
+    font-family: Spectral SC ExtraBold;
+}
+
+.label__name img{
+    width: 37%;
+}
+
+.description__wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    font-size: calc(0.85rem + 0.5vw);
+    padding: 0.65rem;
+}
+
+.content{
+    transition: transform .5s;
+	max-height: 0;
+    overflow: hidden;
+}
+
+.content.open{
+  max-height: 2000px;
+}
+
+.attributes{
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+}
+
+.attribute__btn{
+    transition: transform .5s;
+}
+
+.attribute__btn.open{
+    transform: rotate(180deg);
+}
+
+.attribute_universal {
+    display: flex;
+    align-items: center;
+    margin-top: 1.9rem;
+    font-size: calc(1rem + 1vw);
+}
+
+.map_of_pos img{
+    width: 100%;
+}
+
+.positions{
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    margin-top: 1.3rem;
+}
+
+.positions__description{
+    background-color: #18161B;
+    border-radius: 10px;
+    padding: 0.65rem;
+    font-size: calc(1rem + 0.5vw);
+}
+
+.filter__wrapper {
+    display: grid;
+    background-color: #262135;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 8%;
+    justify-content: center;
+    padding: 5%;
+    border-radius: 20px;
+    margin-top: 1.9rem;
+}
+
+.filter_btn {
+    padding: 0;
+    transition: transform 0.3s ease;
+    width: 100%;
+    background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.filter_btn img {
+    width: 40%;
+    height: auto;
+    pointer-events: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem;
+    margin-top: 1.9rem;
+}
+
+.card__holder {
+    display: flex;
+}
+
+.card {
+    background-color: #18161B;
+    border-radius: 0 0 3px 3px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+}
+
+.name_of_hero {
+    flex: 1;
+    padding: 0.3rem 1.3rem;
+    margin: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+footer{
+    margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+    .filter__wrapper {
+        grid-template-columns: repeat(4, 23%);
+        gap: 2%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+@media (min-width: 640px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}
+
+@media (min-width: 1024px) {
+    .cards {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .cards {
+        grid-template-columns: repeat(5, 1fr); 
+    }
+}
