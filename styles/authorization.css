@@ -1,0 +1,174 @@
+.sidebar{
+    background: linear-gradient(317deg, #1A3549, #030102 50% 50%);
+}
+
+body{
+    background: url('../assets/images/authorization_bc.png') center / cover no-repeat fixed;
+    margin: 0;
+    font-family: Spectral SC ExtraBold;
+    color: #CCCDCE;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.auth-container {
+    width: 100%;
+    perspective: 1000px;
+    margin: 3rem 0;
+}
+
+.auth-form {
+    background: #050505aa;
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease-in-out;
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.login-form {
+    transform: rotateY(0deg);
+}
+
+.register-form {
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.auth-container.login-mode .login-form {
+    transform: rotateY(180deg);
+}
+
+.auth-container.login-mode .register-form {
+    transform: rotateY(360deg);
+}
+
+.auth-title {
+    text-align: center;
+    font-size: calc(1.8rem + 2vw);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: calc(0.8rem + 1vw);
+}
+
+.input-group input {
+    width: 100%;
+    padding: 16px 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: calc(0.8rem + 1vw);
+    font-family: Montseratt;
+    transition: all 0.3s ease;
+    outline: none;
+    color: #fff;
+    background-color: rgb(56, 52, 68, 30%);
+}
+
+.input-group input:focus {
+    box-shadow: 0 0 0 3px #383444;
+}
+
+.input-group input.error {
+    border-color: #580910;
+}
+
+.error-message {
+    color: #580910;
+    font-size: calc(0.7rem + 1vw);
+    margin-top: 5px;
+    display: none;
+}
+
+.password-confirm {
+    display: none;
+}
+
+.auth-button {
+    font-family: Spectral SC ExtraBold;
+    width: 100%;
+    padding: 10px 5px;
+    color: #CCCDCE;
+    background-color: transparent;
+    border: 1px solid #CCCDCE;
+    border-radius: 5px;
+    font-size: calc(1rem + 1vw);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.switch-form {
+    text-align: center;
+    margin-top: 1.8rem;
+}
+
+.switch-button {
+    background: none;
+    border: none;
+    color: #CCCDCE;
+    font-family: Montseratt;
+    font-size: calc(0.8rem + 1vw);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+@media (max-width: 480px) {
+    .auth-form {
+        padding: 30px 20px;
+    }
+}
+
+.success-message {
+    background: #0909097c;
+    color: #CCCDCE;
+    padding: 12px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+    animation: slideIn 0.3s ease;
+}
+
+.hidden {
+    display: none !important;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(180deg);
+    }
+}

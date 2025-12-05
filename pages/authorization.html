@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/authorization.css">
+</head>
+<body>
+    <header class="header">
+      <div class="container">
+        <div class="wrapper">
+          <img src="../assets/images/dota_icon.svg" alt="иконка доты" />
+          <div class="navigation">
+            <button class="burger" id="burger_menu">
+              <span></span><span></span><span></span>
+            </button>
+            <nav class="sidebar">
+              <ul>
+                <li><a href="../pages/items.html">Предметы</a></li>
+                <li><a href="../pages/heroes.html">Герои</a></li>
+                <li><a href="../pages/ranks.html">Ранги</a></li>
+                <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                <li><a href="../pages/runes.html">Руны</a></li>
+                <li><a href="../pages/buildings.html">Постройки</a></li>
+                <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="auth-container" id="authContainer">
+                <div class="auth-form register-form">
+                    <h1 class="auth-title" id="registerTitle">Регистрация</h1>
+                    
+                    <div class="input-group">
+                        <label for="registerEmail">Почта</label>
+                        <input type="email" id="registerEmail" placeholder="Ваша почта">
+                        <div class="error-message" id="registerEmailError">Введите корректный email</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="registerPassword">Пароль</label>
+                        <input type="password" id="registerPassword" placeholder="Придумайте пароль">
+                        <div class="error-message" id="registerPasswordError">Пароль должен быть не менее 6 символов</div>
+                    </div>
+                    
+                    <div class="input-group password-confirm">
+                        <label for="confirmPassword">Подтверждение пароля</label>
+                        <input type="password" id="confirmPassword" placeholder="Повторите пароль">
+                        <div class="error-message" id="confirmPasswordError">Пароли не совпадают</div>
+                    </div>
+                    
+                    <button class="auth-button" id="registerBtn">Создать аккаунт</button>
+                    
+                    <div class="switch-form">
+                        <button class="switch-button" id="toLogin">
+                            У меня уже есть аккаунт
+                        </button>
+                    </div>
+                </div>
+
+                <div class="auth-form login-form">
+                    <h1 class="auth-title" id="loginTitle">Вход</h1>
+                    
+                    <div id="loginMessage" class="success-message">
+                        Аккаунт создан, теперь войдите
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="loginEmail">Почта</label>
+                        <input type="email" id="loginEmail" placeholder="Ваша почта">
+                        <div class="error-message" id="loginEmailError">Введите корректный email</div>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Ваш пароль">
+                        <div class="error-message" id="loginPasswordError">Введите пароль</div>
+                    </div>
+                    
+                    <button class="auth-button" id="loginBtn">Войти</button>
+                    
+                    <div class="switch-form">
+                        <button class="switch-button" id="toRegister">
+                            У меня еще нет аккаунта
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script defer src="../scripts/burger.js"></script>
+    <script defer src="../scripts/authorization.js"></script>
+</body>
+</html>
