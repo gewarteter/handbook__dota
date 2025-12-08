@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Постройки</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/buildings.css">
+</head>
+<body>
+    <div class="intro" id="introPage">
+		<div class="header__screensaver">
+            <div class="container">
+                <div class="inner">
+                    <img src="../assets/images/dota_icon.svg" alt="иконка доты">
+                    <div class="navigation">
+                        <button class="burger" id="burger_menu"><span></span><span></span><span></span></button>
+                        <nav class="sidebar">
+                            <ul>
+                                <li><a href="../pages/items.html">Предметы</a></li>
+                                <li><a href="../pages/heroes.html">Герои</a></li>
+                                <li><a href="../pages/ranks.html">Ранги</a></li>
+                                <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                                <li><a href="../pages/runes.html">Руны</a></li>
+                                <li><a href="../pages/buildings.html">Постройки</a></li>
+                                <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="intro__main">
+			<div class="name"><h1>ПОСТРОЙКИ</h1></div>
+            <div class="container">
+                <div class="text__wrapper">
+                    <div class="description">
+                        <p>Постройки</p>
+                        <span></span>
+                        <p class="definition">неигровые существа, расположенные на карте и выполняющие в основном защитные функции. К ним относятся башни, казармы и крепость.</p>
+                    </div>
+                    <button class="to__buildings" id="next">Все постройки</button>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="page hidden" id="contentPage">
+        <div class="background">
+            <div class="circle circle-left"></div>
+            <div class="circle circle-right"></div>
+        </div>
+		<header>
+        <div class="container">
+            <button class="page__btn arrow_top" id="prev"><img src="../assets/images/arrow_to_left.svg" alt="обратно"></button>
+		</div>
+    	</header>
+        <main>
+            <div class="container">
+                <div class="introduction">
+                    <p>В начале каждого матча команды получают в распоряжение набор построек, появляющихся в заданных позициях. Обе фракции имеют одинаковый набор, отличающийся лишь визуально.</p>
+                    <p style="text-align: right;">Помимо командных, существует несколько нейтральных построек, разбросанных по карте, которые могут быть завоёваны или использованы обеими командами.</p>
+                </div>
+                <div class="content">
+                    <h4><a href="#нейтрал">Нейтральные постройки</a></h4>
+                    <div class="content__ul">
+                        <a href="#Аванпосты">Аванпосты</a>
+                        <a href="#Смотрители">Смотрители</a>
+                        <a href="#Порталы">Порталы</a>
+                        <a href="#Пруды_лотусов">Пруды лотусов</a>
+                    </div>
+                    <h4><a href="#команд">Командные постройки</a></h4>
+                    <div class="content__ul">
+                        <a href="#Башни">Башни</a>
+                        <a href="#Казармы">Казармы</a>
+                        <a href="#Древние">Древние</a>
+                        <a href="#Фонтаны">Фонтаны</a>
+                        <a href="#постройки">Постройки для статуй</a>
+                    </div>
+                </div>
+                <section>
+                    <div class="buildings_def">
+                        <p id="нейтрал">Нейтральные постройки</p>
+                        <span></span>
+                        <p class="definition">постройки, не принадлежащие напрямую ни одной из сторон, но могут быть захвачены или использованы обеими. Они постоянно неуязвимы и невосприимчивы к способностям.</p>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Аванпосты">Аванпосты</h3>
+                        <p>— постройки, расположенные в лесах каждой команды возле потайной лавки (нижняя линия)</p>
+                        <div class="building__img"><img src="../assets/images/outposts.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Нажав на аванпост правой кнопкой мыши, вы начнете прерываемый шестисекундный захват. Чем больше союзников захватывают аванпост, тем быстрее это происходит.</p>
+                            <p>За захват аванпоста дается опыт <span style="font-family: Montseratt Medium; color: #fff;">(25)</span>. Также опыт дается за каждый пятиминутный интервал (15:00, 20:00 и тд.), если в это время вы контролируете аванпост. Если захвачены оба аванпоста,  <span style="font-family: Montseratt Medium; color: #fff;">опыт дается только за один из них.</span></p>
+                            <p>Вокруг аванпоста дается неограниченный обзор в радиусе 500, и на него можно телепортироваться.</p>
+                            <p style="font-family: Montseratt Medium; color: #fff;">Не действуют в первые 10 минут игры. В это время их захватить нельзя. </p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Смотрители">Смотрители</h3>
+                        <p>— маленькие постройки (10 шт), дающие обзор, расположенные в нескольких точках карты. Начинают игру нейтральными и в готовом состоянии.</p>
+                        <div class="building__img"><img src="../assets/images/watchers.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Время захвата фиксировано <span style="font-family: Montseratt Medium; color: #fff;">(1,5 сек)</span> и не меняется от количества одновременно захватывающих игроков.</p>
+                            <p>Если смотритель был нейтрален, по окончании захвата он включается на <span style="font-family: Montseratt Medium; color: #fff;">7</span> минут. Дает обзор радиусом <span style="font-family: Montseratt Medium; color: #fff;">800, не раскрывает невидимость</span>. По истечении этого времени, переходит в готовое состояние, становится нейтральным и может быть захвачен снова.</p>
+                            <p>Если смотритель уже захвачен, по окончании произнесения он отключается на <span style="font-family: Montseratt Medium; color: #fff;">2</span> минуты, становится нейтральным, невыбираемым, потому не может быть захвачен. По истечении этого времени, переходит в готовое состояние и может быть захвачен снова.</p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Порталы">Порталы</h3>
+                        <p>— две постройки, расположенные в северо-западной и юго-восточной частях карты.</p>
+                        <div class="building__img"><img src="../assets/images/portals.png" alt=""></div>
+                        <div class="building__text">
+                            <p style="font-family: Montseratt Medium; color: #fff;">Не принадлежат ни одной команде и могут быть использованы всеми игроками.</p>
+                            <p>Произнесение может быть инициировано любым существом, кроме иллюзий, которые не могут использовать способности.</p>
+                            <p>При использовании одного парного портала, другой парный портал также проигрывает анимацию и звуки использования. При успешном окончании произнесения, существо телепортируется к другому парному порталу.</p>
+                            <p style="font-family: Montseratt Medium; color: #fff;">Существо не избегает снарядов при телепортации.</p>
+                            <p>Несколько существ могут использовать портал одновременно, у каждого будет своё отдельное произнесение.</p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Пруды_лотусов">Пруды лотусов</h3>
+                        <p>— две постройки, находящиеся в западной и восточной частях карты (верхнии линии, топ)</p>
+                        <div class="building__img"><img src="../assets/images/lotus_pools.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Не принадлежат ни одной команде и могут быть использованы всеми игроками. Дают обеим командам обзор в радиусе <span style="font-family: Montseratt Medium; color: #fff;">400</span> вокруг себя. Из-за этого, противники всегда видят и слышат использование прудов лотосов. Также выявляют летающих и передвигающихся через пруды существ.</p>
+                            <p>Пруд пассивно создает лотусы каждые <span style="font-family: Montseratt Medium; color: #fff;">3</span> минуты, на все 6 лотосов потребуется <span style="font-family: Montseratt Medium; color: #fff;">18</span> минут.</p>
+                            <p>Иллюзии, способные накладывать способности, могут собирать Лотосы, <span style="font-family: Montseratt Medium; color: #fff;">но не могут их использовать.</span></p>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="buildings_def">
+                        <p id="команд">Командные постройки</p>
+                        <span></span>
+                        <p class="definition">ключевые строения на базе, уничтожение которых приводит к победе в игре. Эти строения защищают команду и приносят золото при уничтожении.</p>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Башни">Башни</h3>
+                        <p>— основная линия защиты для каждой команды, атакующая любого не-нейтрального врага в своем радиусе. Все три линии фракций защищены 3-мя башнями, а их древние — 2-мя. Общее количество башен — 11.</p>
+                        <div class="building__img"><img src="../assets/images/towers.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Первые башни неуязвимы на стадии подготовки до начала битвы. Вторые и третьи неуязвимы, пока стоят башни предшествующие им на линии. Четвертые неуязвимы, пока не будет уничтожена хотя бы одна третья башня. Казармы не обязательно уничтожать для лишения четвёртых башен неуязвимости.</p>
+                            <p>Днем все башни дают обзор в радиусе 1900. Ночью первые башни имеют обзор в радиусе 600, а все дальнейшие - 1100. <span style="font-family: Montseratt Medium; color: #fff;">Также все они выявляют невидимых существ в радиусе 700 и имеют по одной защитной и поддерживающей способности.</span> Башни могут атаковать, но никогда не атакуют ближайших нейтральных крипов.</p>
+                            <p>Башни дают золото тому, кто уничтожает их, а также всей его команде. При добивании союзником, обе команды получают половину награды.</p>
+                            <p>Командные постройки можно укрепить нажав на башню околого карты или клафишу <span style="font-family: Montseratt Medium; color: #fff;">“J” (глиф)</span>.</p>
+                            <div class="building__img"><img src="../assets/images/map_of_glif.png" alt=""></div>
+                            <p>В начале матча имеет изначальное время перезарядки в <span style="font-family: Montseratt Medium; color: #fff;">180</span> секунд, потому первое использование возможно только спустя 3 минуты после появления первых линейных крипов.</p>
+                            <p>Дает всем союзным постройкам и линейным крипам <span style="font-family: Montseratt Medium; color: #fff;">100 % уменьшение входящего урона</span>. Заставляет башни мгновенно атаковать по уже нескольким целям, находящимся в их радиусе атаки, в момент запуска снаряда атаки.</p>
+                            <p>Уничтожение каждой башни устанавливает перезарядку на уровне в 1 секунду для предотвращения случайных активаций. Перезарядка не устанавливается при уничтожении четвертых башен. </p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Казармы">Казармы (бараки)</h3>
+                        <p>— постройки, находящиеся за и защищаемые  третьими башнями на каждой линии. Эти постройки отвечают за равновесие в силе линейных крипов обеих фракций.</p>
+                        <div class="building__img"><img src="../assets/images/barracks.png" alt=""></div>
+                        <div class="building__text">
+                            <p>У обеих сторон на каждой линии находятся по две казармы — одна для  крипов-мечников, другая — для крипов-магов и  катапульт. Казарма магов на всех линиях и для всех фракций всегда размещается слева от казармы мечников.</p>
+                            <p>Казармы необязательно уничтожать, чтобы сделать  четвертые башни уязвимыми.</p>
+                            <p>Потеря казарм не предотвращает появление союзных линейных крипов, но <span style="font-family: Montseratt Medium; color: #fff;">усиливает вражеских.</span></p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Древние">Древние (трон)</h3>
+                        <p>— огромные постройки каждой из фракций, находящиеся внутри их баз. Основная задача каждой игры — уничтожить древний врага, защитив свой.</p>
+                        <div class="building__img"><img src="../assets/images/ancients.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Охраняются 2-мя защитными башнями 4-го уровня. Для возможности атаковать древнего нужно сперва уничтожить обе эти башни.</p>
+                            <p>Имеют радиус обзора 2600 днём и 2600 ночью и обнаруживают невидимых врагов в радиусе 900 вокруг них.</p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="Фонтаны">Фонтаны</h3>
+                        <p>— сооружения, которые находятся в зоне возрождения героев каждой из фракций и дают им ауру восстановления здоровья и маны. Также они усиленно защищают область появления.</p>
+                        <div class="building__img"><img src="../assets/images/fountains.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Отстреливают вторгнувшихся врагов крайне быстрыми и мощными атаками, которые имеют 25 % точности, развеивают эффекты расходуемых предметов, отключают блинк, тараску и другие способности, которые отключаются уроном от игроков. </p>
+                            <p style="font-family: Montseratt Medium; color: #fff;">Фонтаны неуязвимы, потому их нельзя уничтожить.</p>
+                            <p>Дают обзор в радиусе 1800 днём и 1800 ночью. Также могут обнаруживать невидимых врагов в радиусе 1200 вокруг себя.</p>
+                            <p>Аура восстановления задерживается на <span style="font-family: Montseratt Medium; color: #fff;">3</span> секунды. Может восстановить 300% от максимального здоровья и 360% от максимальной маны существа за минуту.</p>
+                        </div>
+                    </div>
+                    <div class="building">
+                        <h3 class="text_center" id="постройки">Постройки для статуй</h3>
+                        <p>— постройки, существующие только для отвлечения вражеских крипов от главных целей по достижению четвёртых башен или древних. Всего на каждой базе их 7, равномерно разбросанных вокруг древнего.</p>
+                        <div class="building__img"><img src="../assets/images/effigy_buildings.png" alt=""></div>
+                        <div class="building__text">
+                            <p>Постройки имеют радиус обзора 900 днём и 600 ночью, не могут атаковать. У них нет специальных способностей и возможности обнаруживать невидимых.</p>
+                        </div>
+                    </div>
+                </section>
+                <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                </button>
+            </div>
+        </main>
+        <footer></footer>
+        <script defer src="../scripts/buildings.js"></script>
+        <script defer src="../scripts/init.js"></script>
+        <script defer src="../scripts/userService.js"></script>
+        <script defer src="../scripts/burger.js"></script>
+</body>
+</html>

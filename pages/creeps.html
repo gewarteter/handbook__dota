@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Крипы</title>
+    <link rel="stylesheet" href="../styles/basic.css">
+    <link rel="stylesheet" href="../styles/creeps.css">
+</head>
+<body>
+    <div class="intro" id="introPage">
+		<div class="header__screensaver">
+            <div class="container">
+                <div class="inner">
+                    <img src="../assets/images/dota_icon.svg" alt="иконка доты">
+                    <div class="navigation">
+                        <button class="burger" id="burger_menu"><span></span><span></span><span></span></button>
+                        <nav class="sidebar">
+                            <ul>
+                                <li><a href="../pages/items.html">Предметы</a></li>
+                                <li><a href="../pages/heroes.html">Герои</a></li>
+                                <li><a href="../pages/ranks.html">Ранги</a></li>
+                                <li><a href="../pages/creeps.html">Крипы, рошан</a></li>
+                                <li><a href="../pages/runes.html">Руны</a></li>
+                                <li><a href="../pages/buildings.html">Постройки</a></li>
+                                <li><a href="../pages/account.html"><img src="../assets/images/user_avatar.png" alt="Аккаунт"></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+		</div>
+		<div class="intro__main">
+			<div class="name"><h1>КРИПЫ</h1></div>
+            <div class="container">
+                <div class="text__wrapper">
+                    <div class="description">
+                        <p>Крипы</p>
+                        <span></span>
+                        <p class="definition">базовые существа и основной источник заработка золота. Их можно встретить на линиях, в лесу и в нескольких отдельных местах.</p>
+                    </div>
+                    <button class="to__creeps" id="next">Все крипы</button>
+                </div>
+            </div>
+		</div>
+	</div>
+    <div class="page hidden" id="contentPage">
+        <div class="background">
+            <div class="circle circle-left"></div>
+            <div class="circle circle-right"></div>
+        </div>
+		<header>
+        <div class="container">
+            <button class="page__btn arrow_top" id="prev"><img src="../assets/images/arrow_to_left.svg" alt="обратно"></button>
+		</div>
+    	</header>
+        <main>
+            <div class="container">
+                <div class="introduction">
+                    <p>В начале каждого матча команды получают в распоряжение набор построек, появляющихся в заданных позициях. Обе фракции имеют одинаковый набор, отличающийся лишь визуально.</p>
+                    <p style="text-align: right;">Помимо командных, существует несколько нейтральных построек, разбросанных по карте, которые могут быть завоёваны или использованы обеими командами.</p>
+                </div>
+                <div class="content">
+                    <h4><a href="#линейные">Линейные крипы</a></h4>
+                    <div class="content__ul">
+                        <a href="#линейные_типы">Типы</a>
+                        <a href="#линейные_появление">Появление</a>
+                        <a href="#линейные_характеристики">Характеристики</a>
+                    </div>
+                    <h4><a href="#нейтральные">Нейтральные крипы</a></h4>
+                    <div class="content__ul">
+                        <a href="#нейтральные_типы">Типы</a>
+                        <a href="#нейтральные_появление">Появление</a>
+                        <a href="#нейтральные_характеристики">Характеристики</a>
+                        <a href="#нейтральные_награды">Награды</a>
+                    </div>
+                    <h4><a href="#рошан">Рошан</a></h4>
+                    <h4><a href="#контроль">Контроль крипов</a></h4>
+                </div>
+                <section>
+                    <div class="creeps_def">
+                        <p id="линейные">Линейные крипы</p>
+                        <span></span>
+                        <p class="definition">тип крипов, неподконтрольных никакому игроку. Они появляются для обеих фракций  каждые 30 секунд возле их казарм на каждой линии</p>
+                    </div>
+                    <div class="creeps">
+                        <h3 class="text_center" id="линейные_типы">Типы</h3>
+                        <div class="introduction">
+                            <p>Есть 4 типа линейных крипов: крипы-мечники, крипы-маги, крипы-знаменосцы и катапульты. Катапульты появляются каждую десятую волну.</p>
+                            <p style="text-align: right;">Уничтожение вражеских казарм позволит получить уничтожившей команде суперкрипов. Суперкрипы являются сильными версиями обычных линейных крипов, за убийство которых даётся меньше золота и опыта.</p>
+                        </div>
+                        <div class="table-container">
+                            <table class="units-table">
+                                <thead>
+                                    <tr>
+                                        <th>Юнит</th>
+                                        <th>Вид</th>
+                                        <th>Здоровье</th>
+                                        <th>Броня</th>
+                                        <th>Скорость передвижения</th>
+                                        <th>Урон</th>
+                                        <th>Скорость атаки</th>
+                                        <th>Дальность атаки</th>
+                                        <th>Обзор</th>
+                                        <th>Награда</th>
+                                        <th>Опыт</th>
+                                        <th>Дополнительно</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Катапульта</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/catapult_radiant.png" alt="">
+                                                <img src="../assets/images/catapult_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>935</td>
+                                        <td>0</td>
+                                        <td>325</td>
+                                        <td>35-46</td>
+                                        <td>3</td>
+                                        <td>690</td>
+                                        <td>750</td>
+                                        <td>59-72</td>
+                                        <td>88</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 80%</span>
+                                                <span>Анимация атаки: 0,7+2</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мегакатапульта</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/catapult_radiant.png" alt="">
+                                                <img src="../assets/images/catapult_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>935</td>
+                                        <td>0</td>
+                                        <td>325</td>
+                                        <td>51-62</td>
+                                        <td>3</td>
+                                        <td>690</td>
+                                        <td>750</td>
+                                        <td>59-72</td>
+                                        <td>88</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 80%</span>
+                                                <span>Анимация атаки: 0,7+2</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суперкатапульта</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/catapult_radiant.png" alt="">
+                                                <img src="../assets/images/catapult_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>935</td>
+                                        <td>0</td>
+                                        <td>325</td>
+                                        <td>51-62</td>
+                                        <td>3</td>
+                                        <td>690</td>
+                                        <td>750</td>
+                                        <td>59-72</td>
+                                        <td>88</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 80%</span>
+                                                <span>Анимация атаки: 0,7+2</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Крип-маг</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/creep_mage_radiant.png" alt="">
+                                                <img src="../assets/images/creep_mage_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>300</td>
+                                        <td>0</td>
+                                        <td>325</td>
+                                        <td>41-46</td>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>750</td>
+                                        <td>43-52</td>
+                                        <td>69</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Мана: 500</span>
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,5+0,3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суперкрип-маг</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/creep_mage_radiant.png" alt="">
+                                                <img src="../assets/images/creep_mage_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>475</td>
+                                        <td>1</td>
+                                        <td>325</td>
+                                        <td>41-46</td>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>750</td>
+                                        <td>19-25</td>
+                                        <td>22</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Мана: 500</span>
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,5+0,3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Крип-знаменосец</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>550</td>
+                                        <td>2</td>
+                                        <td>325</td>
+                                        <td>19-23</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>34-39</td>
+                                        <td>57</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 40%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Крип-мечник</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>700</td>
+                                        <td>3</td>
+                                        <td>325</td>
+                                        <td>19-23</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>34-39</td>
+                                        <td>57</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суперкрип-знаменосец</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>700</td>
+                                        <td>3</td>
+                                        <td>325</td>
+                                        <td>36-44</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>20-26</td>
+                                        <td>25</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 40%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Суперкрип-мечник</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>700</td>
+                                        <td>3</td>
+                                        <td>325</td>
+                                        <td>36-44</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>20-26</td>
+                                        <td>25</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мегакрип-маг</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/mega_ranged_creep_radiant.png" alt="">
+                                                <img src="../assets/images/mega_ranged_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>1015</td>
+                                        <td>1</td>
+                                        <td>325</td>
+                                        <td>131-136</td>
+                                        <td>1</td>
+                                        <td>500</td>
+                                        <td>750</td>
+                                        <td>19-25</td>
+                                        <td>22</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Мана: 500</span>
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,5+0,3</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мегакрип-знаменосец</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/mega_melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/mega_melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>1270</td>
+                                        <td>3</td>
+                                        <td>325</td>
+                                        <td>96-104</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>20-26</td>
+                                        <td>25</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 40%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Мегакрип-мечник</td>
+                                        <td>
+                                            <div class="images-column">
+                                                <img src="../assets/images/mega_melee_creep_radiant.png" alt="">
+                                                <img src="../assets/images/mega_melee_creep_dire.png" alt="">
+                                            </div>
+                                        </td>
+                                        <td>1270</td>
+                                        <td>3</td>
+                                        <td>325</td>
+                                        <td>96-104</td>
+                                        <td>1</td>
+                                        <td>100</td>
+                                        <td>750</td>
+                                        <td>20-26</td>
+                                        <td>25</td>
+                                        <td>
+                                            <div class="text-column">
+                                                <span>Сопротивление магии: 0%</span>
+                                                <span>Анимация атаки: 0,467+0,533</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="text_center" id="линейные_появление">Появление</h3>
+                        <div class="creeps__text">
+                            <p>Первый раз появляются в 00:00, сразу после звука игрового рога. После этого, каждые 30 секунд. Катапульты начинают появляться на 11-й волне, и после каждые 10 волн. Это значит что катапульты появляются каждые 5 минут, впервые появившись на 5:00.</p>
+                            <p>Изначально, волна крипов состоит из 3 крипов-мечников, 1 крипа-мага и 1 катапульты каждую 10 волну. Центральная линия начинает с 4-х крипов-мечников.</p>
+                            <p>С ходом битвы количество крипов в одной волне увеличивается</p>
+                            <div class="creeps__text__block">
+                                <p>33-я волна и следующие (16:00): Боковые линии получают +1 крипа-мечника. Общее количество крипов-мечников теперь 4 для всех линий.</p>
+                                <p>63-я волна и следующие (31:00): Все линии получают +1 крипа-мечника. Общее количество крипов-мечников теперь 5 для всех линий.</p>
+                                <p>81-я волна и следующие (41:00): Все линии получают +1 крипа-мага и +1 катапульту. Общее количество крипов-магов и катапульт теперь 2 для всех линий.</p>
+                                <p>93-я волна и следующие (46:00): Все линии получают +1 крипа-мечника. Общее количество крипов-мечников теперь 6 для всех линий.</p>
+                            </div>
+                            <p>Линейные крипы появляются ближе к казармам линий, но приспособлены к своей линии так, чтобы они могли встретиться в определенной точке каждой линии, если они не будут прерваны или отвлечены.</p>
+                            <p>Места появления не изменяются в течении матча. Появление крипов в области случайное, нет никакого порядка между юнитами. Это значит что крип-маг или катапульта могут появиться спереди или сзади крипов-мечников.</p>
+                        </div>
+                        <h3 class="text_center" id="линейные_характеристики">Характеристики</h3>
+                        <div class="creeps__text">
+                            <p>Для первых 10 волн (до 5:00), крипы на нижней линии Света и верхней линии Тьмы имеют усиленную скорость передвижения на 30 %, и перемещаются они со скоростью 422.5. На стороне Света, усиление длится 15 секунд, исчезая на половине пути между 1-й и 2-й башнями. На стороне Тьмы, усиление длится 8 секунд, исчезая после достижения 2-й башни. </p>
+                            <p>В то же время, верхняя линия Света и нижняя линия Тьмы замедлены на 35 %, и перемещаются они со скоростью 211.25. На стороне Света, это замедление длится 8 секунд, исчезая после достижения символа Света между двумя подьемами. На стороне Тьмы, замедление длится 22 секунды, исчезая после достижения половины пути между 1-й и 2-й башнями.</p>
+                            <p>11-я и последующие волны (7:30 и последующие) передвигаются без усилений и замедлений со скоростью 325. На центральной линии всегда перемещаются со скоростью 325.</p>
+                            <p>Каждые 7 минут 30 секунд, крипы-мечники и крипы-маги получают бонус к постоянному здоровью и урону, также как и увеличивается награда за их убийство.</p>
+                            <div class="creeps__text__block">
+                                <p>Крипы-мечники: +12 к здоровью, +1 к урону, +1 к награде за убийство</p>
+                                <p>Суперкрипы-мечники: +19 к здоровью, +2 к урону, +1 к награде за убийство</p>
+                                <p>Крипы-маги: +12 к здоровью, +2 к урону, +1 к награде за убийство</p>
+                                <p>Суперкрипы-маги: +18 к здоровью, +3 к урону, +1 к награде за убийство</p>
+                                <p>Катапульты получают лишь одно улучшение, и это +16 к урону после уничтожения вражеских казарм магов на линии этой катапульты.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="creeps_def">
+                        <p id="нейтральные">Нейтральные крипы</p>
+                        <span></span>
+                        <p class="definition">тип крипов, неподконтрольных никакому игроку. Они появляются в небольших лагерях, разбросанных по лесу и по краям всей карты</p>
+                    </div>
+                    <div class="creeps">
+                        <h3 class="text_center" id="нейтральные_типы">Типы</h3>
+                        <div class="introduction">
+                            <p>Есть много разных типов нейтральных крипов, которые появляются небольшими группами внутри лагерей по лесу.</p>
+                            <p style="text-align: right;">Эти лагеря разделены на малые, средние, крупные и лагеря древних крипов.</p>
+                        </div>
+                        <p>Малые лагеря. <span style="color: #CCCDCE;"> За них можно получить совсем немного золота и опыта, они наносят сниженный урон по героям, но увеличенный по крипам, имеют малый запас здоровья, что делает их легкой целью для </span>убийства любым героем в любое время игры.</p>
+                        <div class="table-container">
+                            <table class="camps-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Расположение лагерей</th>
+                                        <th rowspan="2">Крипы</th>
+                                        <th rowspan="2">Название лагеря</th>
+                                        <th colspan="3">Всего золота</th>
+                                        <th colspan="2">Всего опыта</th>
+                                        <th rowspan="2">Всего здоровья</th>
+                                    </tr>
+                                    <tr class="sub-header">
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                        <th>Для стакнувшего</th>
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="6" class="map-cell">
+                                            <div class="map-img"><img src="../assets/images/camp_creep_map.png" alt=""></div>
+                                        </td>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold_soldier.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold_kobold_foreman.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь кобольдов</td>
+                                        <td class="value">50–60</td>
+                                        <td class="value">43–51</td>
+                                        <td class="value">15–18</td>
+                                        <td class="value"><span class="xp-amount">89</span></td>
+                                        <td class="value"><span class="xp-amount">76</span></td>
+                                        <td class="value">1445</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_hill_troll_berserker.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_hill_troll_berserker.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_hill_troll_priest.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь холмовых троллей</td>
+                                        <td class="value">58–64</td>
+                                        <td class="value">49–54</td>
+                                        <td class="value">17–19</td>
+                                        <td class="value"><span class="xp-amount">84</span></td>
+                                        <td class="value"><span class="xp-amount">71</span></td>
+                                        <td class="value">1450</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_hill_troll_berserker.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_hill_troll_berserker.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_kobold_kobold_foreman.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь холмовых троллей и кобольда-бригадира</td>
+                                        <td class="value">59–65</td>
+                                        <td class="value">50–55</td>
+                                        <td class="value">18–20</td>
+                                        <td class="value">
+                                            <span class="xp-amount">86</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">73</span>
+                                        </td>
+                                        <td class="value">1400</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_vhoul_assassin.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_vhoul_assassin.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_vhoul_assassin.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь воулов-убийц</td>
+                                        <td class="value">54–60</td>
+                                        <td class="value">46–51</td>
+                                        <td class="value">16–18</td>
+                                        <td class="value">
+                                            <span class="xp-amount">90</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">77</span>
+                                        </td>
+                                        <td class="value">1200</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_fell_spirit.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_fell_spirit.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_ghost.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь призраков</td>
+                                        <td class="value">53–57</td>
+                                        <td class="value">45–48</td>
+                                        <td class="value">16–17</td>
+                                        <td class="value">
+                                            <span class="xp-amount">94</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">80</span>
+                                        </td>
+                                        <td class="value">1300</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_harpy_scout.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_harpy_scout.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_harpy_stormcrafter.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь гарпий</td>
+                                        <td class="value">59–65</td>
+                                        <td class="value">50–55</td>
+                                        <td class="value">18–20</td>
+                                        <td class="value">
+                                            <span class="xp-amount">94</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">80</span>
+                                        </td>
+                                        <td class="value">1300</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="1">Всего в среднем</td>
+                                        <td class="chance-cell">17% шанс появления в первый раз</td>
+                                        <td class="chance-cell">20% шанс появления в следующие разы</td>
+                                        <td class="value">56–62</td>
+                                        <td class="value">48–53</td>
+                                        <td class="value">17–19</td>
+                                        <td class="value">
+                                            <span class="xp-amount">90</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">77</span>
+                                        </td>
+                                        <td class="value">1349</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Средние лагеря. <span style="color: #CCCDCE;">Относительно слабые лагеря, но сильнее чем малые. </span>За них можно получить немного больше золота и опыта, они наносят небольшой урон и имеют больше здоровья. <span style="color: #CCCDCE;">С некоторыми из них можно разделаться раньше и легче, другие же могут быть для этого слишком сильными.</span></p>
+                        <div class="table-container">
+                            <table class="camps-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Расположение лагерей</th>
+                                        <th rowspan="2">Крипы</th>
+                                        <th rowspan="2">Название лагеря</th>
+                                        <th colspan="3">Всего золота</th>
+                                        <th colspan="2">Всего опыта</th>
+                                        <th rowspan="2">Всего здоровья</th>
+                                    </tr>
+                                    <tr class="sub-header">
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                        <th>Для стакнувшего</th>
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="5" class="map-cell">
+                                            <div class="map-img"><img src="../assets/images/camp_creep_map_2.png" alt=""></div>
+                                        </td>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Centaur_Courser.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Centaur_Conqueror.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь кентавров</td>
+                                        <td class="value">74-82</td>
+                                        <td class="value">63-70</td>
+                                        <td class="value">22-25</td>
+                                        <td class="value"><span class="xp-amount">122</span></td>
+                                        <td class="value"><span class="xp-amount">104</span></td>
+                                        <td class="value">1450</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Giant_Wolf.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Giant_Wolf.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Alpha_Wolf.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь волков</td>
+                                        <td class="value">74–84</td>
+                                        <td class="value">63-71</td>
+                                        <td class="value">22-25</td>
+                                        <td class="value"><span class="xp-amount">140</span></td>
+                                        <td class="value"><span class="xp-amount">119</span></td>
+                                        <td class="value">1600</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Banisher.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Banisher.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Mindstealer.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Mindstealer.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь хсатиров</td>
+                                        <td class="value">72-84</td>
+                                        <td class="value">61-71</td>
+                                        <td class="value">22-25</td>
+                                        <td class="value">
+                                            <span class="xp-amount">140</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">119</span>
+                                        </td>
+                                        <td class="value">1800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ogre_Bruiser.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ogre_Bruiser.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ogre_Frostmage.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь огров</td>
+                                        <td class="value">78-90</td>
+                                        <td class="value">66-77</td>
+                                        <td class="value">23-27</td>
+                                        <td class="value">
+                                            <span class="xp-amount">112</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">95</span>
+                                        </td>
+                                        <td class="value">2200</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Mud_Golem.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Mud_Golem.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь големов</td>
+                                        <td class="value">112-148</td>
+                                        <td class="value">100-133</td>
+                                        <td class="value">24-30</td>
+                                        <td class="value">
+                                            <span class="xp-amount">208</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">188</span>
+                                        </td>
+                                        <td class="value">2500</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="1">Всего в среднем</td>
+                                        <td class="chance-cell">20% шанс появления в первый раз</td>
+                                        <td class="chance-cell">25% шанс появления в следующие разы</td>
+                                        <td class="value">82-98</td>
+                                        <td class="value">71-84</td>
+                                        <td class="value">23-26</td>
+                                        <td class="value">
+                                            <span class="xp-amount">144</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">125</span>
+                                        </td>
+                                        <td class="value">1910</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Крупные лагеря. <span style="color: #CCCDCE;">Сильнейшие из обычных лагерей. Награда в виде золота и опыта за лагерь практически на уровне с наградой за волну линейных крипов. Они состоят из сильных крипов с мощными способностями </span>и их очень сложно убить на ранней стадии игры.</p>
+                        <div class="table-container">
+                            <table class="camps-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Расположение лагерей</th>
+                                        <th rowspan="2">Крипы</th>
+                                        <th rowspan="2">Название лагеря</th>
+                                        <th colspan="3">Всего золота</th>
+                                        <th colspan="2">Всего опыта</th>
+                                        <th rowspan="2">Всего здоровья</th>
+                                    </tr>
+                                    <tr class="sub-header">
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                        <th>Для стакнувшего</th>
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="6" class="map-cell">
+                                            <div class="map-img"><img src="../assets/images/camp_creep_map_3.png" alt=""></div>
+                                        </td>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Centaur_Courser.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Centaur_Courser.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Centaur_Conqueror.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Крупный лагерь кентавров</td>
+                                        <td class="value">92-102</td>
+                                        <td class="value">78-87</td>
+                                        <td class="value">28-31</td>
+                                        <td class="value"><span class="xp-amount">154</span></td>
+                                        <td class="value"><span class="xp-amount">131</span></td>
+                                        <td class="value">1800</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Banisher.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Mindstealer.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Satyr_Tormenter.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Крупный лагерь сатиров</td>
+                                        <td class="value">98-110</td>
+                                        <td class="value">83-94</td>
+                                        <td class="value">29-33</td>
+                                        <td class="value"><span class="xp-amount">160</span></td>
+                                        <td class="value"><span class="xp-amount">136</span></td>
+                                        <td class="value">2000</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Hellbear.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Hellbear_Smasher.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь медведемонов</td>
+                                        <td class="value">96-108</td>
+                                        <td class="value">82-92</td>
+                                        <td class="value">29–32</td>
+                                        <td class="value">
+                                            <span class="xp-amount">156</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">133</span>
+                                        </td>
+                                        <td class="value">1650</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Wildwing.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Wildwing.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Wildwing_Ripper.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь дикокрылов</td>
+                                        <td class="value">96-106</td>
+                                        <td class="value">82-90</td>
+                                        <td class="value">29–32</td>
+                                        <td class="value">
+                                            <span class="xp-amount">142</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">121</span>
+                                        </td>
+                                        <td class="value">1650</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Hill_Troll.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Hill_Troll.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Dark_Troll_Summoner.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь троллей</td>
+                                        <td class="value">82-96</td>
+                                        <td class="value">70-82</td>
+                                        <td class="value">25-29</td>
+                                        <td class="value">
+                                            <span class="xp-amount">174</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">148</span>
+                                        </td>
+                                        <td class="value">2100</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Warpine_Raider.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Warpine_Raider.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь сосновых налетчиков</td>
+                                        <td class="value">100-104</td>
+                                        <td class="value">85-88</td>
+                                        <td class="value">30-31</td>
+                                        <td class="value">
+                                            <span class="xp-amount">152</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">129</span>
+                                        </td>
+                                        <td class="value">1700</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="1">Всего в среднем</td>
+                                        <td class="chance-cell">17% шанс появления в первый раз</td>
+                                        <td class="chance-cell">20% шанс появления в следующие разы</td>
+                                        <td class="value">94-107</td>
+                                        <td class="value">80-91</td>
+                                        <td class="value">28-31</td>
+                                        <td class="value">
+                                            <span class="xp-amount">158</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">135</span>
+                                        </td>
+                                        <td class="value">1942</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p>Лагеря древних. <span style="color: #CCCDCE;">В отличии от обычных крипов, эти крипы имеют особенный тип существа, древний, который делает их в основном </span>невосприимчивыми к многим заклинаниям, <span style="color: #CCCDCE;">например превращающим заклинаниям. С ними почти невозможно сражаться на ранней стадии игры, и </span>для некоторых героев даже в поздней игре. Они имеют очень много здоровья, наносят много урона и владеют сильными аурами. Они также обладают небольшим сопротивлением к магии, <span style="color: #CCCDCE;">что затрудняет их уничтожение с помощью заклинаний наносящих магический урон.</span></p>
+                        <div class="table-container">
+                            <table class="camps-table">
+                                <thead>
+                                    <tr>
+                                        <th rowspan="2">Расположение лагерей</th>
+                                        <th rowspan="2">Крипы</th>
+                                        <th rowspan="2">Название лагеря</th>
+                                        <th colspan="3">Всего золота</th>
+                                        <th colspan="2">Всего опыта</th>
+                                        <th rowspan="2">Всего здоровья</th>
+                                    </tr>
+                                    <tr class="sub-header">
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                        <th>Для стакнувшего</th>
+                                        <th>По умолчанию</th>
+                                        <th>Стакнутый</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td rowspan="4" class="map-cell">
+                                            <div class="map-img"><img src="../assets/images/camp_creep_map_4.png" alt=""></div>
+                                        </td>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Black_Drake.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Black_Drake.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Black_Dragon.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь драконов</td>
+                                        <td class="value">156-172</td>
+                                        <td class="value">133-146</td>
+                                        <td class="value">47-52</td>
+                                        <td class="value"><span class="xp-amount">314</span></td>
+                                        <td class="value"><span class="xp-amount">267</span></td>
+                                        <td class="value">3900</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Granite_Golem.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Granite_Golem.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Granite_Golem.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Крупный лагерь големов</td>
+                                        <td class="value">156-172</td>
+                                        <td class="value">133-146</td>
+                                        <td class="value">47-52</td>
+                                        <td class="value"><span class="xp-amount">314</span></td>
+                                        <td class="value"><span class="xp-amount">267</span></td>
+                                        <td class="value">3565</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Rumblehide.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Rumblehide.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Thunderhide.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Лагерь ящериц</td>
+                                        <td class="value">156-172</td>
+                                        <td class="value">133-146</td>
+                                        <td class="value">47-52</td>
+                                        <td class="value"><span class="xp-amount">314</span></td>
+                                        <td class="value"><span class="xp-amount">267</span></td>
+                                        <td class="value">3400</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="creeps-cell">
+                                            <div class="creeps-grid">
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Frostbitten_Golem.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Frostbitten_Golem.png" alt=""></div>
+                                                <div class="creep-item"><img src="../assets/images/camp_creep_Ancient_Ice_Shaman.png" alt=""></div>
+                                            </div>
+                                        </td>
+                                        <td class="camp-name">Промерзший лагерь</td>
+                                        <td class="value">156-172</td>
+                                        <td class="value">133-146</td>
+                                        <td class="value">47-52</td>
+                                        <td class="value"><span class="xp-amount">314</span></td>
+                                        <td class="value"><span class="xp-amount">267</span></td>
+                                        <td class="value">3300</td>
+                                    </tr>
+                                    <tr class="total-row">
+                                        <td colspan="1">Всего в среднем</td>
+                                        <td class="chance-cell">25% шанс появления в первый раз</td>
+                                        <td class="chance-cell">33% шанс появления в следующие разы</td>
+                                        <td class="value">156-172</td>
+                                        <td class="value">133-146</td>
+                                        <td class="value">47-52</td>
+                                        <td class="value">
+                                            <span class="xp-amount">314</span>
+                                        </td>
+                                        <td class="value">
+                                            <span class="xp-amount">267</span>
+                                        </td>
+                                        <td class="value">3541</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <h3 class="text_center" id="нейтральныеные_появление">Появление</h3>
+                        <div class="creeps__text">
+                            <p>Начинают появляться в 1:00 по игровому времени и после этого появляются каждую минуту (02:00, 03:00, 04:00, и т. д.). Лагерь крипов не может повторить появление одного того же набора нейтральных крипов подряд.</p>
+                            <p>В лагере не появятся нейтральные крипы если в зоне появления лагеря будут существа.</p>
+                            <p>Возможно сделать так чтобы внутри лагеря было много нейтральных крипов. Этого можно достигнуть спровоцировав уже существующих крипов и заставив их покинуть зону появления. Если зона будет пуста в следующую минутную отметку, в этом лагере появится новая группа нейтральных крипов. Спровоцированные ранее крипы возвратятся в свой лагерь, теперь лагерь состоит из 2 групп нейтральных крипов.</p>
+                            <p>Зоны появления можно увидеть зажав горячую клавишу Alt.</p>
+                        </div>
+                        <h3 class="text_center" id="нейтральные_характеристики">Характеристики</h3>
+                        <div class="creeps__text">
+                            <p>Нейтральные крипы увеличивают свои характеристики с течением времени.</p>
+                            <p>Каждый интервал улучшения происходит каждые 7,5 мин. после звучания игрового рога. Мгновенно улучшает всех существующих нейтральных крипов при каждом интервале улучшения. Также уровень некоторых способностей нейтральных крипов повышается каждые 15 минут до двух раз после горна начала игры.</p>
+                            <div class="creeps__text__block">
+                                <p>Макс. стаков: 30</p>
+                                <p>Интервал улучшения: 450</p>
+                                <p>Доп. здоровье за интервал: 30</p>
+                                <p>Доп. броня за интервал: 0,5</p>
+                                <p>Доп. базовый урон от атаки за интервал: 3</p>
+                                <p>Доп. скорость атаки за интервал: 5</p>
+                                <p>Увеличение награды в золоте за интервал: 1</p>
+                                <p>Увеличение награды в опыте за интервал: 5</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="creeps_def">
+                        <p id="рошан">Рошан</p>
+                        <span></span>
+                        <p class="definition">крип, который в начале игры появляется в своем нижнем логове на центральной реке и при смене времени суток переходит в логово на верхней части реки</p>
+                    </div>
+                    <div class="creeps">
+                        <div class="creeps__text">
+                            <p>Только несколько героев могут справиться с ним в одиночку в средней игре. Даже в поздней игре большинству героев трудно сражаться с ним один на один, так как Рошан становится сильнее с течением времени.</p>
+                            <p>Обладает 4 способностями:</p>
+                            <div class="creeps__text__block">
+                                <h4 class="text_center">Strength of the Immortal</h4>
+                                <p>Уменьшение урона от иллюзий: 80%</p>
+                                <p>Здоровья варда в урон: 100%</p>
+                                <p>Радиус: 1</p>
+                                <p>Интервал в минутах: 1</p>
+                                <p>Бонусная броня за интервал: 0,375</p>
+                                <p>Бонусное макс. здоровье за интервал: 115</p>
+                                <p>Бонусный урон от атаки за интервал: 6</p>
+                                <p>Прирост опыта за убийство за интервал: 20</p>
+                                <p>Длительность задержки ауры: 0,5</p>
+                                <p>Первый бонус к броне даётся при появлении первой волны крипов, затем — каждую минуту. Бонусы не пропадают после смерти и продолжают увеличиваться даже когда он мёртв.</p>
+                                <p>Атаки иллюзий наносят на 80% меньше урона Рошану, однако, если они могут использовать способности, то урон от заклинаний будет полным.</p>
+                            </div>
+                            <div class="creeps__text__block">
+                                <h4 class="text_center">Защита от способностей</h4>
+                                <p>Рошан блокирует одно направленное заклинание каждые 15 секунд</p>
+                                <p>Не блокирует заклинания, применяемые союзниками.</p>
+                            </div>
+                            <div class="creeps__text__block">
+                                <h4 class="text_center">Оглушающий удар</h4>
+                                <p>Рошан может оглушить при атаке.</p>
+                                <p>Шанс срабатывания: 15%</p>
+                                <p>Урон: 50</p>
+                                <p>Длительность оглушения: 1,65</p>
+                            </div>
+                            <div class="creeps__text__block">
+                                <h4 class="text_center">Хлопок</h4>
+                                <p>Радиус эффекта: 350</p>
+                                <p>Начальный урон: 70</p>
+                                <p>Интервал в минутах: 1</p>
+                                <p>Дополнительный урон за интервал: 10</p>
+                                <p>Замедление скорости передвижения: 50%</p>
+                                <p>Замедление скорости атаки: 50</p>
+                                <p>Длительность на героях: 2</p>
+                                <p>Длительность на не-героях: 4</p>
+                                <p>Рошан использует Хлопок только когда рядом с ним 3 или более вражеских существ. При этом, если в его радиусе оказались 3 врагов, то Рошан начнет постоянно использовать способность после атаки по нему независимо от числа врагов (до его следующего возрождения). Урон увеличивается на 10 каждую минуту с момента первого появления крипов. Первое увеличение произойдет с появлением первой волны крипов.</p>
+                            </div>
+                            <p>Каждый игрок команды, убившей Рошана, получает 135 золота, тот, кто лично добил Рошана, получит 200-900. Опыт разделяется на команду, убившую Рошана.</p>
+                            <p>Помимо этого, выпадает несколько мощных расходуемых предметов. Они могут быть подобраны любым героем вне зависимости от того, каким игроком или командой был убит Рошан:</p>
+                            <div class="creeps__text__block">
+                                <h4 class="text_center">Aegis of the Immortal:</h4>
+                                <p>Выпадает при каждой смерти Рошана. Рошан забирает этот предмет при возрождении, где бы он не находился. Не может быть передан или выброшен, если предмет был подобран. Не может быть продан. Поднятие или уничтожение предмета отобразится в виде уведомления обеим командам.</p>
+                                <h4 class="text_center">Cheese:</h4>
+                                <p>Выпадает после второй смерти. Полностью передаваемый предмет. Может быть продан за 500  первым игроком, который подобрал предмет.</p>
+                                <h4 class="text_center">Aghanim's Blessing:</h4>
+                                <p>После третьей смерти может выпасть этот предмет, если Рошан был убит на стороне Света, либо Refresher Shard. Всегда выпадает после четвертой смерти. Полностью передаваемый предмет. Не может быть продан.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div class="creeps">
+                        <h3 class="text_center" id="контроль">Контроль крипов</h3>
+                        <div class="creeps__text">
+                            <p>Следующие способности могут манипулировать крипами или их принадлежностью с целью получения контроля над ними. Игроки могут использовать способности подконтрольных им крипов:</p>
+                            <div class="creeps__text__block">
+                                <p>Chen — Holy Persuasion</p>
+                                <p>Enchantress — Enchant</p>
+                                <p>Helm of the Dominator — Dominate</p>
+                                <p>Helm of the Overlord — Dominate</p>
+                                <p>Lifestealer — Infest</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button class="scroll-top" id="scrollTop" aria-label="Наверх">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                </button>
+            </div>
+        </main>
+        <footer></footer>
+        <script defer src="../scripts/creeps.js"></script>
+        <script defer src="../scripts/burger.js"></script>
+        <script defer src="../scripts/init.js"></script>
+        <script defer src="../scripts/userService.js"></script>
+</body>
+</html>
